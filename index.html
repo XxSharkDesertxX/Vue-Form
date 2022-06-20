@@ -12,12 +12,30 @@
             flex-direction: column;
             text-align: center;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: rgb(68, 68, 68);
+            background-color: rgb(151, 14, 37);
             color: white;
         }
         #app{
             display: flex; flex-direction: column;
             justify-content: space-around;
+        }
+        .box_contaner{
+            background-color: #fff;
+            width: 20rem;
+            height: 2rem;
+            display: flex; justify-content: space-around; align-items: center;
+            padding: .5rem 0;
+            border-radius: 99999px;
+        }
+        .box_contaner input{
+            border: none; outline: none;
+            font-size: 1rem;
+        }
+        .box_icon{
+            width: 1rem; height: 1rem;
+            background: rgb(20, 20, 187);
+            border-radius: 50%;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -30,25 +48,10 @@
 
 
     <div id="app">
-        <p>
-           conter : {{cont}}
-        </p>
-        <button v-on:click="plusCont()">
-            click me for add conter
-        </button>
-        <button @click="negativeCont()">
-            click me for munes conter
-        </button>
-
-        <br>
-        <p v-text="text_box"></p>
-        <p v-text="cx"></p>
-
-
-        <input type="text" placeholder="type somting ..."
-            @keyup="showValue" 
-            @mousemove="showClientx"
-        >
+        <div class="box_contaner">
+            <input :type="ps" placeholder="password">
+            <div class="box_icon" @click="handel()"></div>
+        </div>
     </div>
 
 

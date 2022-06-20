@@ -1,32 +1,19 @@
 new Vue({
     el:"#app",
+
     data:{
-        cont:0,
-        text_box:'',
-        cx:0,
+        tx:"text",
+        ps:"password",
     },
 
     methods: {
-        plusCont:function () {
-            this.cont += 1;
-        },
-        negativeCont:function () {
-           if (this.cont <= 0) {
-               this.cont = 0;
-               alert(`the conter is => ${this.cont}`);
-               return false;
-           } else {
-                this.cont -=1;
+        handel:function () {
+           if (this.ps == "password") {
+               this.ps="text";
+           }else{
+               this.ps="password";
            }
-        },
+        }  
+    },
 
-        // event key 
-        showValue:function (e) {
-            this.text_box = e.target.value;
-        },
-
-        showClientx:function (e) {
-            this.cx = e.clientX;
-        }
-    }
 });
