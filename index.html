@@ -7,11 +7,17 @@
     <title>practice vue js</title>
     <style>
         body{
+            height: 100vh;
             display: flex; justify-content: center; align-items: center;
             flex-direction: column;
+            text-align: center;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: rgb(68, 68, 68);
             color: white;
+        }
+        #app{
+            display: flex; flex-direction: column;
+            justify-content: space-around;
         }
     </style>
 </head>
@@ -24,8 +30,25 @@
 
 
     <div id="app">
-            <p>{{name}}.{{family}}</p>
-            <p @click="plusCounter()">Counter: {{counter}}</p>
+        <p>
+           conter : {{cont}}
+        </p>
+        <button v-on:click="plusCont()">
+            click me for add conter
+        </button>
+        <button @click="negativeCont()">
+            click me for munes conter
+        </button>
+
+        <br>
+        <p v-text="text_box"></p>
+        <p v-text="cx"></p>
+
+
+        <input type="text" placeholder="type somting ..."
+            @keyup="showValue" 
+            @mousemove="showClientx"
+        >
     </div>
 
 

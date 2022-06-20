@@ -1,14 +1,32 @@
 new Vue({
     el:"#app",
     data:{
-        counter:0,
-        name:"Vue",
-        family:"js"
+        cont:0,
+        text_box:'',
+        cx:0,
     },
 
     methods: {
-        plusCounter:function () {
-            this.counter += 1;
+        plusCont:function () {
+            this.cont += 1;
+        },
+        negativeCont:function () {
+           if (this.cont <= 0) {
+               this.cont = 0;
+               alert(`the conter is => ${this.cont}`);
+               return false;
+           } else {
+                this.cont -=1;
+           }
+        },
+
+        // event key 
+        showValue:function (e) {
+            this.text_box = e.target.value;
+        },
+
+        showClientx:function (e) {
+            this.cx = e.clientX;
         }
-    },
+    }
 });
