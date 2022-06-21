@@ -37,6 +37,9 @@
             border-radius: 50%;
             cursor: pointer;
         }
+        input{
+            outline: none;
+        }
     </style>
 </head>
 <body>
@@ -49,16 +52,22 @@
 
     <div id="app">
         
-        <a v-bind:href="links">
-            click me
-        </a>
+        <div v-html="show">
+        </div>
 
-        <br>
+        <p>
+            {{text}}
+        </p>
 
-        <a :href="links">
-            clik me
-        </a>
+        <button @click="change">
+                change text 
+        </button>
 
+
+        <h2>
+            {{dark}}
+        </h2>
+        <input type="text" placeholder="type somting " v-model="dark">
     </div>
 
 
