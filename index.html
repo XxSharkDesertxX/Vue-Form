@@ -48,10 +48,17 @@
 
 
     <div id="app">
-        <div class="box_contaner">
-            <input :type="ps" placeholder="password">
-            <div class="box_icon" @click="handel()"></div>
-        </div>
+        
+        <a v-bind:href="links">
+            click me
+        </a>
+
+        <br>
+
+        <a :href="links">
+            clik me
+        </a>
+
     </div>
 
 
