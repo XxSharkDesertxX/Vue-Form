@@ -52,22 +52,23 @@
 
     <div id="app">
         
-        <div v-html="show">
-        </div>
+        <button @click="cont ++">add conters</button>
+        <button @click="cont --">remove conters</button>
+        <p v-text="cont"> </p>
 
-        <p>
-            {{text}}
-        </p>
+        <p v-if="cont > 10">the conter biger of 10 ....  {{cont}}</p>
+        <p v-else-if="cont <= 0"> the conter lower of zero dont tracket ....  {{cont}}</p>
+        <p v-else>the conter lower of 10 .... {{cont}}</p>
 
-        <button @click="change">
-                change text 
-        </button>
+        <p v-show="cont === 13"> the number is 13 so god ....</p>
+
+        <hr>
+
+        <p v-if="weather == 'sun'">weather is : sunny</p>
+        <p v-else-if="weather == 'dark'">weather is : runy or cluody</p>
+        <p v-else>weather is : storm </p>
 
 
-        <h2>
-            {{dark}}
-        </h2>
-        <input type="text" placeholder="type somting " v-model="dark">
     </div>
 
 
